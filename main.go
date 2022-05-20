@@ -5,6 +5,16 @@ import (
 	"runtime"
 )
 
+func HelloWorld(name string, age, height int) {
+	fmt.Println("Hello", name)
+	fmt.Println("age", age)
+	fmt.Println("height", height)
+}
+
+func AddTotal(a, b int) (int, int) {
+	return a + b, a -b
+}
+
 func main() {
 	var welcome string = "hello world"
 	const personalWelcome string = "hello ejiro"
@@ -75,4 +85,11 @@ func main() {
 		fmt.Println(ages[i])
 		i++
 	}
+
+	HelloWorld("Ejiro", 27, 6)
+
+	total, negativeTotal := AddTotal(5,3)
+fmt.Println(total, negativeTotal)
+
+
 }
